@@ -79,15 +79,37 @@ public class BigO {
      *     ^ the same runtime complexity is applied to this method which takes 2 parameters. Because they still run linearly the runtime complexity remains as O(n)
      *******************************************************************************************************************************************************************************************
      *
+     *    public void log(int[] nums, String[] names){
+     *         for (int i = 0; i < nums.length; i++) {
+     *             for (int o = 0; o < names.length; o++) {
+     *                 System.out.println(nums[o]);
+     *             }
+     *         }
+     *     }
+     *
+     *     ^in the method above, the nested for loop will run as many times as the first one does. Meaning that it's runtime complexity is O(n^2).
+     *     This algorithm runs in quadratic time, which runs slower than a linear algorithm as the input grows larger
+     *
+     *     adding another nested loop will cause the algorithm to run in o(n^3) (cubed) which will run far slower than o(n^2)
+     *******************************************************************************************************************************************************************************************
+     *
+     *  Growth Rates:
+     *
+     *  - O(log n) (logarithmic) - this growth rate will grow at the same rate as O(n) (linear) but will slow down at some point. This makes this growth rate more efficient and scalable than a linear algorithm
+     *   ex: say you have an array of sorted numbers from 1 to 10. and you wish to find the number 10. Using a for loop to iterate through every element will be using O(n) or a linear algorithm
+     *   however you can use binary search  which runs in O(log n) (logarithmic) which is much faster. Binary search will start off by looking at the middle value. then it will see if the value is smaller or greater
+     *   than the one we are looking for. Since 5 is smaller than 10, 10 must be on the right side of the array. This leaves out the values 1-5 automatically without having to iterate though them.
+     *   This algorithm will repeatively narrow down the search until the value is found without having to iterate through every element. This matters because in an array with a large input ex: 1M, this algorithm will only need to compare 19 times.
+     *
+     * - O(2^n) (exponential) this algorithm is the opposite of O(log n). As the input size grows the logarithmic algorithm's curve slows down. However as the input grows an exponential algorithm's curve grows faster.
+     *  This algorithm is not scalable at all resulting in it being very slow.
      */
 
     public void log(int[] nums, String[] names){
         for (int i = 0; i < nums.length; i++) {
-            System.out.println(nums[i]);
-        }
-
-        for (int i = 0; i < names.length; i++) {
-            System.out.println(nums[i]);
+            for (int o = 0; o < names.length; o++) {
+                System.out.println(nums[o]);
+            }
         }
     }
 }
