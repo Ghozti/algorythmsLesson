@@ -40,18 +40,14 @@ public class Array {
 
         int[] finalArray = new int[newArr.length + newArr2.length];
 
-        System.out.println(Arrays.toString(newArr));
-        System.out.println(Arrays.toString(newArr2));
-
         for (int i = 0; i < newArr.length; i++){
             finalArray[i] = newArr[i];
         }
 
         int oo = 0;
-        for (int i = newArr.length; i < newArr2.length; i++) {
-            System.out.println(i);
+        for (int i = newArr.length; i < newArr2.length + newArr.length; i++) {
             finalArray[i] = newArr2[oo];
-            o++;
+            oo++;
         }
 
         arr = finalArray;
