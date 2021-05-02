@@ -25,13 +25,36 @@ public class Array {
      */
 
     public void removeAt(int index){
-        int[] newArr = new int[arr.length-1];
-        for (int i = 0; i < size--; i++) {
-            if(arr[index] != arr[i]){
-                newArr[i] = arr[i];
-            }
+        int[] newArr = new int[index];
+        int[] newArr2 = new int[size - newArr.length-1];
+
+        for (int i = 0; i < newArr.length; i++) {
+            newArr[i] = arr[i];
         }
-        arr = newArr;
+
+        int o = 0;
+        for (int i = index+1; i < arr.length; i++) {
+            newArr2[o] = arr[i];
+            o++;
+        }
+
+        int[] finalArray = new int[newArr.length + newArr2.length];
+
+        System.out.println(Arrays.toString(newArr));
+        System.out.println(Arrays.toString(newArr2));
+
+        for (int i = 0; i < newArr.length; i++){
+            finalArray[i] = newArr[i];
+        }
+
+        int oo = 0;
+        for (int i = newArr.length; i < newArr2.length; i++) {
+            System.out.println(i);
+            finalArray[i] = newArr2[oo];
+            o++;
+        }
+
+        arr = finalArray;
     }
 
     /**
