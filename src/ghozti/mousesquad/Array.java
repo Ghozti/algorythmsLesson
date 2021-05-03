@@ -5,14 +5,17 @@ import java.util.Arrays;
 public class Array {
 
     int size;
-    int[] arr = {1,2,3,4,5,6,7,8,9};
+    int currentMax = 0;
+    int[] arr;
 
     public Array(int size){
         this.size = size;
+        arr = new int[size];
     }
 
     public void insert(int item){
-
+        arr[currentMax] = item;
+        currentMax++;
     }
 
     /**
@@ -52,10 +55,6 @@ public class Array {
 
         arr = finalArray;
     }
-
-    /**
-     * TODO the array removeAt method does fine until it reaches the index. Afterwards it does not add the numbers.
-     */
 
     public void print(){
         System.out.println(Arrays.toString(arr));
