@@ -16,6 +16,7 @@ public class Main {
         array.print();
         array.insert(6);
 	    array.removeAt(3);
+        System.out.println(array.indexOf(1));
 	    array.print();
     }
 }

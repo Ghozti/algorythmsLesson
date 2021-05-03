@@ -60,4 +60,13 @@ public class Array {
     public void print(){
         System.out.println(Arrays.toString(arr));
     }
+
+    public int indexOf(int value){
+        for (int i = 0; i < size; i++) {
+            if (arr[i] == value){
+                return i;
+            }
+        }
+        return -1;
+    }
 }
