@@ -17,7 +17,7 @@ public class Array {
         if (currentMax == size){
             int[] newArr =  new int[size+1];
 
-            for (int i = 0; i < size--; i++) {
+            for (int i = 0; i < size; i++) {
                 newArr[i] = arr[i];
             }
 
