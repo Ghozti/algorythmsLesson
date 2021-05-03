@@ -18,15 +18,6 @@ public class Array {
         currentMax++;
     }
 
-    /**
-     * [1,2,3,4,5,6,7,8,9]
-     *
-     * 3 [4]
-     *
-     * [1,2,3,5,6,7,8,9]
-     *
-     */
-
     public void removeAt(int index){
         int[] newArr = new int[index];
         int[] newArr2 = new int[size - newArr.length-1];
