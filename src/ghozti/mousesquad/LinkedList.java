@@ -5,12 +5,18 @@ public class LinkedList {
     private Node first;
     private Node last;
 
-    public void addFirst(){
+    public void addFirst(int val){
 
     }
 
-    public void addLast(){
+    public void addLast(int val){
+        var node = new Node(val);
 
+        if(first == null){
+            first = last = node;
+        }else {
+            last.setNext(node);
+        }
     }
 
     public void deleteFirst(){
