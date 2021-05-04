@@ -52,5 +52,8 @@ public class DataStructures {
      *  delete beginning - O(1)
      *  delete end - O(n)
      *  delete middle - O(n)
+     *
+     *  you can store any type of object in a linked list by simple not specifying the type in the <> generic parameter.
+     *  ex: LinkedList e = new LinkedList();
      */
 }
